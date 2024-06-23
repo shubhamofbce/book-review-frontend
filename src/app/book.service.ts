@@ -15,7 +15,7 @@ interface ApiResponse {
   providedIn: 'root'
 })
 export class BookService {
-  private apiUrl = 'http://book-review-production.up.railway.app/api/books';
+  private apiUrl = 'https://book-review-production.up.railway.app/api/books';
 
   constructor(private http: HttpClient) { }
   getBooks(currentPage: number, sortCriteria: string = ''): Observable<any[]> {
