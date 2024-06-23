@@ -1,0 +1,79 @@
+.review-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .review-form input,
+  .review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .review-form textarea {
+    resize: vertical;
+  }
+  
+  .review-form button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .review-form button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .review-form button:not([disabled]):hover {
+    background-color: #0056b3;
+  }
+  
+  .review-form small {
+    color: red;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .star-rating {
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .star-rating span {
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+  
+  .star-rating span.filled {
+    color: gold;
+  }
+  
+  .star-rating,
+  .star-rating ~ span {
+    color: gold;
+  }
+  

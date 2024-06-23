@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Shubham Book Store</h1>
+        <p class="page-description">Browse through our extensive collection of books. Use the search bar to find books by title, author, or genre.</p>
+    </div>
+    <div class="search-bar">
+        <select [(ngModel)]="searchCriteria" class="search-select stylish-select">
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="genre">Genre</option>
+        </select>
+        <input 
+            type="text" 
+            placeholder="Hit Enter to Search..." 
+            class="search-input" 
+            (keyup)="onSearch($event)">
+        
+            <select [(ngModel)]="sortCriteria" class="sort-select stylish-select" (change)="onSortChange($event)">
+                <option value="">Sort By</option>
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="-average_rating">Avg Rating</option>
+            </select>
+    </div>
+    <div class="book-grid">
+        <div [routerLink]="['/book', book.id]" class="book-card" *ngFor="let book of books">
+            <div class="book-info">
+                <img [src]="book.cover_image_url" alt="{{book.title}} cover">
+                <h3>{{ book.title }}</h3>
+                <p>{{ book.author }}</p>
+                <p>{{ book.genre }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="pagination-controls">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+        <button (click)="nextPage()">Next</button>
+    </div>
+</div>

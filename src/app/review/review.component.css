@@ -1,0 +1,31 @@
+.reviews-list {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+  }
+  
+  .review-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rating {
+    font-size: 20px;
+    color: #efd9d9; /* Star color */
+  }
+  
+  .rating .star {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .rating .star.filled {
+    color: #f39c12; /* Filled star color */
+  }
+  
+  .comment {
+    margin-left: 30px;
+  }
+  

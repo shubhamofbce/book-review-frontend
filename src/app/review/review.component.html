@@ -1,0 +1,17 @@
+<div class="reviews-list">
+    <h2 style="margin-left: 50px;">{{total_reviews}} Reviews <br> Average rating: {{average_rating}}</h2>
+
+    <ul>
+      <div *ngFor="let review of reviews" class="review-item">
+        
+        <div class="comment">
+          <p><strong>Rating:</strong></p>
+          <div class="rating">
+            <span class="star" [class.filled]="i <= review.rating" *ngFor="let i of [1, 2, 3, 4, 5]">&#9733;</span>
+          </div>
+          <p><strong>Comment:</strong> {{ review.comment }}</p>
+        </div>
+      </div>
+    </ul>
+  </div>
+  

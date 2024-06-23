@@ -1,0 +1,22 @@
+<div *ngIf="book" class="book-detail">
+    <div class="book-detail-header">
+      <img [src]="book.cover_image_url" alt="{{book.title}} cover" class="book-cover">
+      <div class="book-info">
+        <h1>{{ book.title }}</h1>
+        <h2>{{ book.author }}</h2>
+        <p class="rating">Average Rating: {{ book.average_rating }}</p>
+        <p class="reviews">Total Reviews: {{ book.total_reviews }}</p>
+        <button (click)="viewReviews()" class="view-reviews-btn">View Reviews</button>
+        <p class="description">{{ book.description }}</p>
+        <p class="publisher" *ngIf="book.publisher">Publisher: {{ book.publisher }}</p>
+        <p class="genre" *ngIf="book.genre">Genre: {{ book.genre }}</p>
+        <p class="isbn" *ngIf="book.isbn">ISBN: {{ book.isbn }}</p>
+        <p class="page-count" *ngIf="book.pageCount">Page Count: {{ book.page_count }}</p>
+        <p class="language" *ngIf="book.language">Language: {{ book.language }}</p>
+        <p class="created">Created: {{ book.created | date }}</p>
+        <p class="updated">Updated: {{ book.updated | date }}</p>
+      </div>
+    </div>
+    <app-review-form [bookId]="book.id"></app-review-form>
+  </div>
+  
