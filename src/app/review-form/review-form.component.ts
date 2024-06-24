@@ -38,11 +38,6 @@ export class ReviewFormComponent {
         response => {
           console.log('Review submitted successfully', response);
           this.reviewForm.reset();
-          this.snackBar.open('Review submitted successfully', 'Close', { // Show popup here
-            duration: 3000, // 3 seconds
-            horizontalPosition: 'center',
-            verticalPosition: 'top',
-          });
         },
         error => {
           console.error('Error submitting review', error);
